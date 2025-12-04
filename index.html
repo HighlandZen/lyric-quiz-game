@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lyric Quiz — Music Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-wrap">
+    <header>
+      <h1>Lyric Quiz</h1>
+      <div class="score-timer">
+        <div>Score: <span id="score">0</span></div>
+        <div>Time: <span id="time">15</span>s</div>
+      </div>
+    </header>
+
+    <main>
+      <div id="card" class="card animate-in">
+        <p id="lyric" class="lyric">Loading...</p>
+        <input id="answer" placeholder="Song title..." autocomplete="off" />
+        <div class="controls">
+          <button id="submitBtn">Submit</button>
+          <button id="skipBtn">Skip (-10)</button>
+        </div>
+        <p id="feedback" class="feedback"></p>
+      </div>
+
+      <div id="endScreen" class="card hidden">
+        <h2>Round Complete!</h2>
+        <p>Your score: <strong id="finalScore">0</strong></p>
+        <input id="playerName" placeholder="Name for leaderboard">
+        <button id="saveScoreBtn">Save Score</button>
+        <button id="playAgainBtn">Play Again</button>
+        <p id="saveMsg"></p>
+      </div>
+
+      <div id="leaderboard" class="card">
+        <h3>Leaderboard</h3>
+        <ol id="scoresList"><li>Loading...</li></ol>
+        <button id="refreshLeaderboard">Refresh</button>
+      </div>
+    </main>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
